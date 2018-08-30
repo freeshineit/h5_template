@@ -1,0 +1,21 @@
+{
+  "name": "h5_template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:freeshineit/h5_template.git",
+  "author": "shine <xiaoshaoqq@gmial.com>",
+  "license": "MIT",
+  "scripts": {
+    "server": "supervisor server/index.js",
+    "dev": "",
+    "start": "npm run dev",
+    "build": ""
+  },
+  "dependencies": {
+    "koa": "^2.5.2",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "koa-views": "^6.1.4"
+  }
+}
