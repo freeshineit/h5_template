@@ -18,6 +18,11 @@ app.use(Static(
 ));
 
 app.use(Static(
+    path.join(__dirname, `${ROOT_PATH}static`)
+));
+
+
+app.use(Static(
     path.join(__dirname, `${ROOT_PATH}dist`)
 ));
 

@@ -1,12 +1,18 @@
+const path = require('path');
+
+
 module.exports = {
 	dev: {
 		port: 8889,
-		publicPath: "",
+		publicPath: path.resolve(__dirname, '../static'),
 		proxy: {
 
-		}
+		},
+		entry: path.resolve(__dirname, '../public/js/index.js'),
 	},
 	pro: {
-
+		buildPath: path.resolve(__dirname, '../dist'),
+		entry: path.resolve(__dirname, '../public/js/index.js'),
+		piclicStatic: path.resolve(__dirname, '../public/static'),
 	}
 }
