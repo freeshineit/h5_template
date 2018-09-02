@@ -9,7 +9,7 @@ const fileName = [
     {name: 'home', 'js': true},
     {name: 'about', 'js': true},
     {name: 'plus', 'js': true},
-    {name: 'icon', 'js': false},
+    {name: 'icon', 'js': true},
 ];
 
 module.exports = {

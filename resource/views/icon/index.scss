@@ -1,0 +1,19 @@
+@import "../../assets/scss/base.scss";
+
+.icon-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    .icon-item {
+        font-size: 0;
+        width: 25%;
+        height: rem(88px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+            font-size: 24px;
+        }
+    }
+}

@@ -1,6 +1,7 @@
+import './index.scss'
 
 const iconName = [
-	'icon-delete:',
+	'icon-delete',
 	'icon-download',
 	'icon-home',
 	'icon-todown',
@@ -18,9 +19,7 @@ const iconName = [
 ]
 
 class Icon {
-
 	render () {
-
 		const iconNode = $('.icon-list');
 		let html = '';
 
@@ -29,13 +28,11 @@ class Icon {
 				<li class='icon-item'><span class="icon ${iconName[i]}"></span></li>
 			`
 		}
-
+		console.log(html)
 		iconNode.append(html)	
 	}
-
-
 }
 
 let icon = new Icon();
 
-icon.render()
+icon.render();
