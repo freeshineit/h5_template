@@ -1,4 +1,4 @@
-import './index.less'
+import './index.scss'
 import images from '../../assets/images/a.png'
 
 class About  {

@@ -31,13 +31,14 @@ module.exports = {
 	},
     devtool: 'eval',    
     devServer: {
-        contentBase: [path.resolve(__dirname, '../'),path.resolve(__dirname, '../views')], //默认webpack-dev-server会为根文件夹提供本地服务器，如果想为另外一个目录下的文件提供本地服务器，应该在这里设置其所在目录（本例设置到"build"目录）
-        historyApiFallback: true, //在开发单页应用时非常有用，它依赖于HTML5 history API，如果设置为true，所有的跳转将指向index.html
+        contentBase: [path.resolve(__dirname, '../'), path.resolve(__dirname, '../views'), path.resolve(__dirname, '../views/home/index.html')], //默认webpack-dev-server会为根文件夹提供本地服务器，如果想为另外一个目录下的文件提供本地服务器，应该在这里设置其所在目录（本例设置到"build"目录）
         hot: true,
         host: '0.0.0.0',  // 同一局域网段下，可以通过IP (192.168.X.X:8000) 访问
         inline: true, //设置为true，当源文件改变时会自动刷新页面
         port: Config.dev.port, //设置默认监听端口，如果省略，默认为"8083"
-        proxy: Config.dev.proxy
+        proxy: Config.dev.proxy,
+        noInfo: false,
+        open: true
     },
     module: {
         rules: [
@@ -52,10 +53,13 @@ module.exports = {
                 }
             },
             {
-                test: /\.less|css$/,
+                test: /\.(sass|scss|css)$/,
                 loader: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
-                    use: ['css-loader', `less-loader?{"sourceMap":true}`]
+                    use: [
+                            'css-loader', 
+                            `sass-loader`
+                    ]
                 }),
             },
             { 
@@ -72,7 +76,6 @@ module.exports = {
         ]
     },
     plugins: [
-        // new ExtractTextPlugin(path.resolve(__dirname, '../public/assert/less/common.less')),
         new ExtractTextPlugin({
             filename: 'views/[name]/index.css'
         }),

@@ -14,24 +14,20 @@ app.use(bodyParser({
 }));
 
 app.use(Static(
-    path.join(__dirname, `${ROOT_PATH}public`)
-));
-
-app.use(Static(
-    path.join(__dirname, `${ROOT_PATH}static`)
-));
-
-
-app.use(Static(
     path.join(__dirname, `${ROOT_PATH}dist`)
 ));
 
+app.use(Static(
+    path.join(__dirname, `${ROOT_PATH}dist/views`)
+));
+
+app.use(views(path.join(__dirname, `${ROOT_PATH}dist/views`), {
+  // map : {html:'ejs'}
+}));
 
 // route
-
-router.get('*', async (ctx, next) => {
-    // await ctx.render('home',);
-    ctx.body = 'hahaha'
+router.get('/', async (ctx, next)=> {
+    await ctx.render('home/index.html');
     await next();
 })
 

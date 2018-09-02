@@ -46,7 +46,7 @@ module.exports = {
                 test: /\.less|css$/,
                 loader: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
-                    use: ['css-loader', `less-loader?{"sourceMap":true}`]
+                    use: ['css-loader', `sass-loader`]
                 }),
             },
             { 
@@ -63,16 +63,9 @@ module.exports = {
         ]
     },
     plugins: [
-        // new ExtractTextPlugin(path.resolve(__dirname, '../public/assert/less/common.less')),
         new ExtractTextPlugin({
             filename: 'views/[name]/index.[hash:10].css'
         }),
-
-        //  minify:{
-        //     removeComments: true,//删除注释
-        //     collapseWhitespace:true//删除空格
-        // }
-
         htmlWebpack ('home'),
         htmlWebpack ('about'),
         new CopyWebpackPlugin([

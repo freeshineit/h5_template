@@ -1,4 +1,4 @@
-import './index.less'
+import './index.scss'
 
 class Home  {
 	say () {

@@ -1,0 +1,92 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@font-face {
+  font-family: 'iconfont';  /* project id 818541 */
+  src: url('//at.alicdn.com/t/font_818541_rkyvgx5tlk.eot');
+  src: url('//at.alicdn.com/t/font_818541_rkyvgx5tlk.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_818541_rkyvgx5tlk.woff') format('woff'),
+  url('//at.alicdn.com/t/font_818541_rkyvgx5tlk.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_818541_rkyvgx5tlk.svg#iconfont') format('svg');
+}
+
+.icon {
+  font-family:"iconfont" !important;
+  font-size:14px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon-delete:before { content: "\e60f"; }
+
+.icon-download:before { content: "\e614"; }
+
+.icon-home:before { content: "\e626"; }
+
+.icon-todown:before { content: "\e64f"; }
+
+.icon-qrcode:before { content: "\e729"; }
+
+.icon-wangxin:before { content: "\e66c"; }
+
+.icon-address:before { content: "\e603"; }
+
+.icon-arr-right:before { content: "\e647"; }
+
+.icon-zan:before { content: "\e600"; }
+
+.icon-close:before { content: "\e639"; }
+
+.icon-finish:before { content: "\e63c"; }
+
+.icon-failure:before { content: "\e646"; }
+
+.icon-arr-left:before { content: "\e72a"; }
+
+.icon-arr-bottom:before { content: "\e72e"; }
+
+.icon-arr-up:before { content: "\e72f"; }

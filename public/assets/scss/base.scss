@@ -1,0 +1,22 @@
+// 自定义全局样式
+@import "./theme.scss";
+
+$vm_fontsize: 75px; // iPhone 6尺寸的根元素大小基准值
+@function rem($px) {
+     @return ($px / $vm_fontsize ) * 1rem;
+}
+// 根元素大小使用 vw 单位
+$vm_design: 750px;
+
+html {
+    font-size: ($vm_fontsize / ($vm_design / 2)) * 100vw; 
+    // 同时，通过Media Queries 限制根元素最大最小值
+    @media screen and (max-width: 320px) {
+        font-size: 64px;
+    }
+
+    @media screen and (min-width: 540px) {
+        font-size: 108px;
+    }
+}
+
