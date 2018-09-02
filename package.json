@@ -9,7 +9,8 @@
     "server": "supervisor server/index.js",
     "dev": "webpack-dev-server --mode development --progress --config build/webpack.dev.config.js",
     "start": "npm run dev",
-    "build": "webpack --mode production --progress --coloe --config build/webpack.pro.config.js"
+    "build": "webpack --mode production --progress --coloe --config build/webpack.pro.config.js",
+    "xxx": "webpack --mode development --progress --coloe --config build/webpack.dev.config.js"
   },
   "dependencies": {
     "koa": "^2.5.2",

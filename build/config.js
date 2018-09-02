@@ -1,7 +1,19 @@
 const path = require('path');
 
+/**
+ * 静态资源文件名
+ * name: 静态资源名
+ * js: 是否有对应的js文件
+ */
+const fileName = [
+    {name: 'home', 'js': true},
+    {name: 'about', 'js': true},
+    {name: 'plus', 'js': true},
+    {name: 'icon', 'js': false},
+];
 
 module.exports = {
+	fileName: fileName,
 	dev: {
 		port: 8889,
 		publicPath: path.resolve(__dirname, '../static'),

@@ -8,7 +8,7 @@ const Config = require('./config');
 
 
 const htmlWebpack = (file) => {
-    let filePath = path.resolve(__dirname, `../public/views/${file}/index.html`)
+    let filePath = path.resolve(__dirname, `../resource/views/${file}/index.html`)
     return new HtmlWebpackPlugin({
             filename: path.resolve(__dirname, `../dist/views/${file}/index.html`),
             inject: 'body',
@@ -19,8 +19,8 @@ const htmlWebpack = (file) => {
 }
 
 const entry = {
-    home: path.resolve(__dirname, '../public/views/home/index.js'),
-    about: path.resolve(__dirname, '../public/views/about/index.js'),
+    home: path.resolve(__dirname, '../resource/views/home/index.js'),
+    about: path.resolve(__dirname, '../resource/views/about/index.js'),
 }
 
 module.exports = {
@@ -37,7 +37,7 @@ module.exports = {
                 test: '/\.js$/',  
                 loader: 'babel',  
                 exclude: path.resolve(__dirname, 'node_modules'), 
-                include: path.resolve(__dirname, '../public'),
+                include: path.resolve(__dirname, '../resource'),
                 query: {
                     presets: ['env'] 
                 }
@@ -70,7 +70,7 @@ module.exports = {
         htmlWebpack ('about'),
         new CopyWebpackPlugin([
             { 
-                from: 'public/static', 
+                from: 'resource/static', 
                 to: 'static'
             }
         ])

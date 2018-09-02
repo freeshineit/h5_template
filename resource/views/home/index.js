@@ -41,3 +41,4 @@ class Home  {
 }
 
 new Home('.home-list');
+
