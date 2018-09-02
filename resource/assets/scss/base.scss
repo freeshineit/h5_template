@@ -20,3 +20,35 @@ html {
     }
 }
 
+$header_H: 40px;
+
+.header, .footer_nav {
+	height: $header_H;
+	background-color: #fff;
+	font-size: 12px;
+}
+
+.footer_nav	.nav_list .item {
+	color: $font_color_secondary;
+}
+
+.footer_nav	.nav_list .item.selected {
+	color: $font_color;
+}
+
+#main {
+	height: 100vh;
+	overflow: auto;
+
+	.content-padding {
+		padding-top: $header_H + 20px;
+		padding-bottom: $header_H + 5px;
+	}
+}
+
+$padding: 10px;
+.content-padding {
+	padding-left: $padding;
+	padding-right: $padding;
+}
+

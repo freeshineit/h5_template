@@ -6,7 +6,11 @@ module.exports = {
 		port: 8889,
 		publicPath: path.resolve(__dirname, '../static'),
 		proxy: {
-
+			'/':{
+                target:'https://m.baidu.com',
+                secure:true,
+                changeOrigin:true
+            }
 		},
 		entry: path.resolve(__dirname, '../public/js/index.js'),
 	},

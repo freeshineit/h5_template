@@ -90,3 +90,50 @@ table {
 .icon-arr-bottom:before { content: "\e72e"; }
 
 .icon-arr-up:before { content: "\e72f"; }
+
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 40px;
+	box-shadow: 0px 1px 3px rgba(0,0,0,.2);
+}
+
+.nav {
+
+}
+
+.footer {
+
+}
+
+.footer_nav {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 40px;	
+	font-size: 12px;
+	background-color: #fff;
+	box-shadow: 1px 0px 3px rgba(0,0,0,.2);
+}
+
+.footer_nav	.nav_list {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+	height: 40px;
+	line-height: 39px;
+}
+
+.footer_nav	.nav_list .item {
+	width: 18vw;
+}
+
+
+
+
+
