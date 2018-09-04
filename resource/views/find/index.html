@@ -2,22 +2,25 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="referrer" content="never">
 	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-	<title>About</title>
+	<title>Detail</title>
 	<link rel="stylesheet" type="text/css" href="/static/css/base.css">
 	<script>
-	    var _global = {
-	        footerNav: 4
-	    }
-    </script>
-
+		var _global = {
+			footerNav: 1
+		}
+	</script>
 </head>
 <body>
 	#include("../common/header/index.html")
-	<div>
-		me
+	<div class='main-has-header main-has-footer main'>
+		<section>
+			<ul class='home-list'></ul>
+		</section>
 	</div>
 	#include("../common/footer_nav/index.html")
+
 	<script type="text/javascript" src="/static/js/lib/zepto.1.2.min.js"></script>
 	<script type="text/javascript" src="/static/js/common.js"></script>
 </body>

@@ -45,6 +45,7 @@ const devWebpackConfig = () => {
                 }
             ])
     ]
+
     plugins = plugins.concat(htmlWebpack())
 
     return {
@@ -68,7 +69,7 @@ const devWebpackConfig = () => {
             rules: [
                 //解析.js
                 {   
-                    test: '/\.js$/',  
+                    test: '/\.js$/',
                     loader: 'babel',  
                     exclude: path.resolve(__dirname, 'node_modules'), 
                     include: path.resolve(__dirname, '../resource'),
@@ -87,7 +88,7 @@ const devWebpackConfig = () => {
                     }),
                 },
                 { 
-                    test: /\.(png|jpg|gif|svg)$/,
+                    test: /\.(png|jpe?g|gif|svg)$/,
                     loader: 'file-loader',
                     query: {
                         name: 'assets/images/[name]-[hash:5].[ext]'

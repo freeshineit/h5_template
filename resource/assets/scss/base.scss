@@ -20,7 +20,9 @@ html {
     }
 }
 
-$header_H: 40px;
+// 
+
+$header_H: 50px;
 
 .header, .footer_nav {
 	height: $header_H;
@@ -36,13 +38,12 @@ $header_H: 40px;
 	color: $font_color;
 }
 
-#main {
-	height: 100vh;
-	overflow: auto;
-
-	.content-padding {
-		padding-top: $header_H + 20px;
-		padding-bottom: $header_H + 5px;
+.main {
+	&-has-header {
+		padding-top: $header_H;
+	}
+	&-has-footer {
+		padding-bottom: $header_H;
 	}
 }
 
