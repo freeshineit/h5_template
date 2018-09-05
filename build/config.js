@@ -20,7 +20,7 @@ module.exports = {
 		publicPath: path.resolve(__dirname, '../static'),
 		proxy: {
 			'/':{
-                target:'https://m.baidu.com',
+                target:'http://baobab.kaiyanapp.com',
                 secure:true,
                 changeOrigin:true
             }

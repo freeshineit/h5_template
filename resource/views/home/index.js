@@ -13,11 +13,10 @@ class Home  {
 	getData() {
 
 		$.ajax({
-			url: '/sf/vsearch/image/search/wisejsonala?tn=wisejsonala&ie=utf8&cur=result&fromsf=1&word=%E7%BE%8E%E5%A5%B3&pn=60&rn=30&gsm=3c',
+			url: '/api/v3/ranklist?num=10&strategy=weekly',
 			method: 'GET',
 			success: (res) => {
-				this.data = JSON.parse(res).data
-				this.renderHtml(this.data);
+				this.renderHtml(res.itemList);
 			}
 		})
 	}
@@ -28,12 +27,13 @@ class Home  {
 		let html = '';
 
 		for(let i =0 ; i < data.length; i++ ){
-			html += `
-				<li class="home-list-item" >
-					<img src=${data[i].thumbnail_url}/>
-					<p class='title'>${data[i].title}</p>
-				</li>
-			`
+			if (data[i].type == 'video')
+				html += `
+					<li class="home-list-item" >
+						<img src=${data[i].data.cover.feed}/>
+						<p class='title'>${data[i].data.title}</p>
+					</li>
+				`
 		}
 
 		node.append(html);
