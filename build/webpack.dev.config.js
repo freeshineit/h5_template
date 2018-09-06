@@ -91,7 +91,7 @@ const devWebpackConfig = () => {
                     test: /\.(png|jpe?g|gif|svg)$/,
                     loader: 'file-loader',
                     query: {
-                        name: 'assets/images/[name]-[hash:5].[ext]'
+                        name: 'assets/images/[name].[ext]'
                     },
                 },
                 {
